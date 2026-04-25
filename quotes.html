@@ -4,50 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quotes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="print.css" media="print">
 </head>
 
 <body>
-    <header>
-        <div>OtakuFun</div>
-        <div>
-            <a href="index.html">Acceuil</a>
-            <a href="#">Quotes</a>
+    <header class="site-header">
+        <a href="index.html" class="logo">OtakuFun</a>
+        <nav class="site-nav">
+            <a href="index.html">Accueil</a>
+            <a href="quotes.html" aria-current="page">Quotes</a>
             <a href="contact.html">Contactez-moi</a>
-        </div>
+        </nav>
     </header>
 
-    <section>
-        <h1>Poursuivez l'aventure et explorez davantage de citations</h1>
-        <div>
-            <label for="quote-search">Rechercher une citation:</label>
-            <input type="search" name="q" placeholder="Entrer l'autheur" id="quote-search" />
-            <button>Search</button>
-        </div>
-        <div>
-            <div>
-                <p>"Je ne reviens jamais sur ma parole. C'est ça pour moi, être un ninja !" <span>Naruto Uzumaki</span>
-                </p>
-                <div>
+    <section class="quotes-page">
+        <h1 class="quotes-page__title">Poursuivez l'aventure et explorez davantage de citations</h1>
+
+        <form class="search" role="search">
+            <label for="quote-search" class="search__label">Rechercher une citation:</label>
+            <div class="search__field">
+                <input type="search" name="q" placeholder="Entrer l'auteur" id="quote-search" class="search__input" />
+                <button type="submit" class="search__button">Search</button>
+            </div>
+        </form>
+
+        <div class="quotes-grid">
+            <div class="quote-card">
+                <p class="quote-card__text">"Je ne reviens jamais sur ma parole. C'est ça pour moi, être un ninja !"
+                    <span class="quote-card__author">Naruto Uzumaki</span></p>
+                <div class="quote-card__socials">
                     <img src="facebook.png" alt="facebook icon">
                     <img src="twitter-alt.png" alt="x icon">
                     <img src="instagram.png" alt="instagram icon">
                 </div>
             </div>
-            <div>
-                <p>"Si je ne peux pas protéger mon équipage, alors je ne mérite pas de devenir le Roi des Pirates !"
-                    <span>Monkey D. Luffy</span>
-                </p>
-                <div>
+            <div class="quote-card">
+                <p class="quote-card__text">"Si je ne peux pas protéger mon équipage, alors je ne mérite pas de devenir
+                    le Roi des Pirates !" <span class="quote-card__author">Monkey D. Luffy</span></p>
+                <div class="quote-card__socials">
                     <img src="facebook.png" alt="facebook icon">
                     <img src="twitter-alt.png" alt="x icon">
                     <img src="instagram.png" alt="instagram icon">
                 </div>
             </div>
-            <div>
-                <p>Peu importe le nombre de personnes que vous perdez, vous n'avez pas d'autre choix que de continuer à
-                    vivre, peu importe l'ampleur des coups qu'on vous porte. <span>Tanjiro Kamado</span></p>
-                <div>
+            <div class="quote-card">
+                <p class="quote-card__text">Peu importe le nombre de personnes que vous perdez, vous n'avez pas d'autre
+                    choix que de continuer à vivre, peu importe l'ampleur des coups qu'on vous porte. <span
+                        class="quote-card__author">Tanjiro Kamado</span></p>
+                <div class="quote-card__socials">
                     <img src="facebook.png" alt="facebook icon">
                     <img src="twitter-alt.png" alt="x icon">
                     <img src="instagram.png" alt="instagram icon">
@@ -55,32 +66,30 @@
             </div>
         </div>
 
-        <div>
-            <div>
-                <p>"Pourquoi devrais-je ressentir de la haine envers quelqu'un qui est plus faible que moi ? Je ne
-                    ressens que de la pitié." <span>Escanor</span>
-                </p>
-                <div>
+        <div class="quotes-grid">
+            <div class="quote-card">
+                <p class="quote-card__text">"Pourquoi devrais-je ressentir de la haine envers quelqu'un qui est plus
+                    faible que moi ? Je ne ressens que de la pitié." <span class="quote-card__author">Escanor</span></p>
+                <div class="quote-card__socials">
                     <img src="facebook.png" alt="facebook icon">
                     <img src="twitter-alt.png" alt="x icon">
                     <img src="instagram.png" alt="instagram icon">
                 </div>
             </div>
-            <div>
-                <p>"La peur engendre la colère, la colère engendre la haine et la haine conduit à la souffrance."
-                    <span>Pain/Nagato</span>
-                </p>
-                <div>
+            <div class="quote-card">
+                <p class="quote-card__text">"La peur engendre la colère, la colère engendre la haine et la haine conduit
+                    à la souffrance." <span class="quote-card__author">Pain / Nagato</span></p>
+                <div class="quote-card__socials">
                     <img src="facebook.png" alt="facebook icon">
                     <img src="twitter-alt.png" alt="x icon">
                     <img src="instagram.png" alt="instagram icon">
                 </div>
             </div>
-            <div>
-                <p>Les gens vivent en s'appuyant sur leurs convictions et leurs connaissances et ils appellent cela la
-                    réalité. Mais le savoir et la compréhension sont des concepts ambigus. <span>Itachi Uchiha</span>
-                </p>
-                <div>
+            <div class="quote-card">
+                <p class="quote-card__text">Les gens vivent en s'appuyant sur leurs convictions et leurs connaissances
+                    et ils appellent cela la réalité. Mais le savoir et la compréhension sont des concepts ambigus.
+                    <span class="quote-card__author">Itachi Uchiha</span></p>
+                <div class="quote-card__socials">
                     <img src="facebook.png" alt="facebook icon">
                     <img src="twitter-alt.png" alt="x icon">
                     <img src="instagram.png" alt="instagram icon">
@@ -89,13 +98,10 @@
         </div>
     </section>
 
-    <footer>
-        <div>
-            OtakuFun
-        </div>
-        <div>
-            Designed By IAD
-        </div>
+
+    <footer class="site-footer">
+        <div class="site-footer__brand">OtakuFun</div>
+        <div class="site-footer__credit">Designed By IAD</div>
     </footer>
 </body>
 

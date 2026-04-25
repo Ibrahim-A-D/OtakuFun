@@ -1,0 +1,43 @@
+body {
+    background: #fff;
+    color: #000;
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.5;
+}
+
+.site-nav, .quote-card__socials, .search, .contact-form__submit, .quotes-header > h2 {
+    display: none;
+}
+
+.hero{
+    background: #fff;
+}
+
+.card, .feature, .quote-card {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    break-inside: avoid;
+    box-shadow: none;
+}
+
+
+.hero::after, .feature > h1,  .contact__title em {
+    color: #000;
+}
+
+.feature p{
+    color: #000;
+}
+
+h1 { break-after: avoid; }
+footer { break-before: avoid; }
+
+.page,
+    .contact {
+        display: block;
+    }
+    .quotes-grid {
+        grid-template-columns: 1fr;
+    }

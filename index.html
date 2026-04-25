@@ -4,26 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="OtakuFun — La voix des animés. Amateur d'animés ou simple curieux, plongez dans les citations les plus marquantes du genre.">
     <title>OtakuFun</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="print.css" media="print">
+
 </head>
 
 <body>
-    <header>
-        <div>OtakuFun</div>
-        <div>
-            <a href="#">Acceuil</a>
+    
+    <header class="site-header">
+        <a href="index.html" class="logo">OtakuFun</a>
+        <nav class="site-nav">
+            <a href="index.html" aria-current="page">Accueil</a>
             <a href="quotes.html">Quotes</a>
             <a href="contact.html">Contactez-moi</a>
-        </div>
+        </nav>
     </header>
 
-    <section>
-        <div>
+    <section class="page">
+        <div class="hero">
             <h1>Bienvenue</h1>
             <p>Amateur d'animés ou simple curieux, plongez dans les citations les plus marquantes du genre</p>
         </div>
-        <h1>A propos de ma passion</h1>
-        <p>Je me souviens encore de la première fois que j'ai regardé un anime à la télévision. Mais c'est lors du
+        <h1 class="about-title">A propos de ma passion</h1>
+        <p class="about-text">Je me souviens encore de la première fois que j'ai regardé un anime à la télévision. Mais c'est lors du
             combat entre Rock Lee et Gaara que j'ai vraiment compris mon amour pour cet univers. À l'époque voir des
             épisodes relevait du hasard on tombait dessus par chance à la télé ou soit avec les CD : je parcourais
             de longues distances pour les louer ou les acheter afin de suivre les histoires dans l'ordre.
@@ -37,7 +50,7 @@
             animés ne se résument pas à des mots il faut se lancer les vivre pour vraiment les comprendre.
             Je suis Ibrahima Assiatou Diallo, et voilà ma passion</p>
 
-        <div>
+        <div class="card card--definition">
             <h1>C'est quoi les Animes ?</h1>
             <p>Un anime c'est l'imagination débordante q'un auteur donne vie. Un monde totalement différent du nôtre
                 même si des ressemblances surgissent parfois, peuplé de combats épiques, d'histoires profondes et de
@@ -45,7 +58,7 @@
                 les films ni les séries classiques ne peuvent égaler</p>
         </div>
 
-        <div>
+        <div class="card card--attirance">
             <h1>Pourquoi c'est Interessant ?</h1>
             <p>Ce qui rend les animes si captivants c'est leur imprévisibilité. On croit deviner la suite et on se
                 trompe,
@@ -56,7 +69,7 @@
                 ? C'est ça la magie : on s'accroche, on espère, on ressent</p>
         </div>
 
-        <div>
+        <div class="feature">
             <h1>Pourquoi ce site ?</h1>
             <p>Ce site vous offre une fenêtre sur l'univers des animes à travers les paroles, les motivations et les
                 objectifs de personnages inoubliables en citations. Peut-être qu'une phrase une seule
@@ -64,34 +77,41 @@
                 bon mot au bon moment.</p>
         </div>
 
-        <div>
+        <div class="quotes-header">
             <h1>Les Citations Populaires</h1>
-            <h2>voir plus</h2>
+            <a href="quotes.html" class="quotes-header__link">
+                <h2>voir plus</h2>
+            </a>
         </div>
-        <div>
-            <div>
-                <p>"Je ne reviens jamais sur ma parole. C'est ça pour moi, être un ninja !" <span>Naruto Uzumaki</span>
-                </p>
-                <div>
+        <div class="quotes-grid">
+            <div class="quote-card">
+                <p class="quote-card__text">"Je ne reviens jamais sur ma parole. C'est ça pour moi, être un ninja !" <span class="quote-card__author">Naruto Uzumaki</span></p>
+                <div class="quote-card__socials">
                     <img src="facebook.png" alt="facebook icon">
                     <img src="twitter-alt.png" alt="x icon">
                     <img src="instagram.png" alt="instagram icon">
                 </div>
             </div>
-            <div>
-                <p>"Si je ne peux pas protéger mon équipage, alors je ne mérite pas de devenir le Roi des Pirates !"
-                    <span>Monkey D. Luffy</span>
-                </p>
-                <div>
+            <div class="quote-card">
+                <p class="quote-card__text">"Si je ne peux pas protéger mon équipage, alors je ne mérite pas de devenir le Roi des Pirates !" <span class="quote-card__author">Monkey D. Luffy</span></p>
+                <div class="quote-card__socials">
                     <img src="facebook.png" alt="facebook icon">
                     <img src="twitter-alt.png" alt="x icon">
                     <img src="instagram.png" alt="instagram icon">
                 </div>
             </div>
-            <div>
-                <p>Peu importe le nombre de personnes que vous perdez, vous n'avez pas d'autre choix que de continuer à
-                    vivre, peu importe l'ampleur des coups qu'on vous porte. <span>Tanjiro Kamado</span></p>
-                <div>
+            <div class="quote-card">
+                <p class="quote-card__text">Peu importe le nombre de personnes que vous perdez, vous n'avez pas d'autre choix que de continuer à
+                    vivre, peu importe l'ampleur des coups qu'on vous porte. <span class="quote-card__author">Tanjiro Kamado</span></p>
+                <div class="quote-card__socials">
+                    <img src="facebook.png" alt="facebook icon">
+                    <img src="twitter-alt.png" alt="x icon">
+                    <img src="instagram.png" alt="instagram icon">
+                </div>
+            </div>
+            <div class="quote-card">
+                <p class="quote-card__text">La peur engendre la colère, la colère engendre la haine, et la haine conduit à la souffrance. <span class="quote-card__author">Pain / Nagato</span></p>
+                <div class="quote-card__socials">
                     <img src="facebook.png" alt="facebook icon">
                     <img src="twitter-alt.png" alt="x icon">
                     <img src="instagram.png" alt="instagram icon">
@@ -100,11 +120,11 @@
         </div>
     </section>
 
-    <footer>
-        <div>
+    <footer class="site-footer">
+        <div class="site-footer__brand">
             OtakuFun
         </div>
-        <div>
+        <div class="site-footer__credit">
             Designed By IAD
         </div>
     </footer>
