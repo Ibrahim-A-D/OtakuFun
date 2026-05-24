@@ -1,0 +1,51 @@
+// ============================================
+// BARRE DE RECHERCHE
+// ============================================
+
+.search {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 560px;
+
+    &__label {
+        .section-label();          // mixin
+    }
+
+    &__field {
+        display: flex;
+        align-items: stretch;
+        border-bottom: 1px solid @ink;
+        transition: border-color 0.2s;
+
+        &:focus-within {
+            border-bottom-color: @accent;
+        }
+    }
+
+    &__input {
+        flex: 1;
+        border: 0;
+        background: transparent;
+        padding: 0.75rem 0.25rem;
+        font-family: @f-body;
+        font-size: 1rem;
+        color: @ink;
+        outline: none;
+
+        &::placeholder {
+            color: @muted;
+            font-style: italic;
+        }
+
+        &::-webkit-search-cancel-button {
+            appearance: none;
+        }
+    }
+
+    &__button {
+        .dark-button();            // mixin : bouton sombre
+        padding: 0 1.5rem;
+        font-size: 11px;
+    }
+}

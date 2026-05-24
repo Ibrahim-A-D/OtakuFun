@@ -1,0 +1,29 @@
+// ============================================
+// VARIABLES Less
+// ============================================
+// Avant (CSS)  : on utilisait  var(--bg)  dans :root { }
+// Apres (Less) : on utilise    @bg        directement
+// Less remplace @bg par sa valeur (#f7f3ec) au moment de la compilation
+// ============================================
+
+// --- Couleurs ---
+@bg:        #f7f3ec;       // fond principal (beige clair)
+@bg-alt:    #ece6d8;       // fond alternatif (cartes)
+@ink:       #15141c;       // texte principal (quasi-noir)
+@ink-soft:  #3b3a44;       // texte secondaire (gris fonce)
+@muted:     #8a8577;       // texte discret (gris)
+@accent:    #b84030;       // couleur d'accent (rouge brique)
+@dark:      #15141c;       // fond sombre (sections foncees)
+@rule:      rgba(21, 20, 28, 0.15);  // lignes separatrices
+@white:     #fff;
+@light-text:#f5f0e8;       // texte clair sur fond sombre
+@light-muted:#c9c3b5;      // texte discret sur fond sombre
+
+// --- Polices ---
+@f-display: "Playfair Display", "Times New Roman", Georgia, serif;
+@f-body:    "Source Serif 4", "Source Serif Pro", Georgia, serif;
+@f-mono:    "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+// --- Espacement et mise en page ---
+@gutter:    ~"clamp(1.25rem, 3vw + 0.5rem, 3rem)";
+@max:       1280px;

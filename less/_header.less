@@ -1,0 +1,56 @@
+// ============================================
+// HEADER + NAVIGATION
+// ============================================
+// Avant (CSS) : .site-header, .logo, .site-nav, .site-nav a
+//               etaient 4 blocs separes
+// Apres (Less) : on IMBRIQUE (nesting) les elements enfants
+//                dans leur parent. Le & remplace le selecteur parent.
+// ============================================
+
+.site-header {
+    border-bottom: 1px solid @rule;
+    padding: 1.2rem @gutter;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .container-center();    // mixin : max-width + margin auto
+}
+
+.logo {
+    font-family: @f-display;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: @ink;
+}
+
+.site-nav {
+    display: flex;
+    gap: clamp(1rem, 3vw, 2.5rem);
+
+    // --- NESTING ---
+    // Avant (CSS) :  .site-nav a { ... }
+    // Apres (Less) : on ecrit  a { }  A L'INTERIEUR de .site-nav
+    // Less comprend que ca veut dire ".site-nav a"
+    a {
+        font-family: @f-mono;
+        font-size: 12px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: @ink;
+        padding: 0.25rem 0;
+        border-bottom: 2px solid transparent;
+        transition: color 0.15s, border-color 0.15s;
+
+        // & = le selecteur parent, ici "a"
+        // Donc &:hover = .site-nav a:hover
+        &:hover {
+            color: @accent;
+        }
+
+        // &[aria-current="page"] = .site-nav a[aria-current="page"]
+        &[aria-current="page"] {
+            border-bottom-color: @accent;
+        }
+    }
+}

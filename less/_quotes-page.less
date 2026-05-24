@@ -1,0 +1,33 @@
+// ============================================
+// PAGE QUOTES (page dediee aux citations)
+// ============================================
+
+.quotes-page {
+    .container-center();           // mixin
+    padding: clamp(2rem, 4vw, 5rem) @gutter;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(2rem, 4vw, 3.5rem);
+
+    // --- Titre de la page ---
+    &__title {
+        .display-title();          // mixin
+        font-size: ~"clamp(1.75rem, 3vw + 1rem, 3rem)";
+        line-height: 1.15;
+        max-width: 22ch;
+        position: relative;
+        padding-top: 1.5rem;
+
+        &::before {
+            content: "Toutes les citations";
+            .section-label();      // mixin
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+    }
+
+    // --- Grille 3 colonnes sur la page quotes ---
+    .quotes-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -1,0 +1,21 @@
+//  Ce fichier ne contient AUCUN style direct.
+// Il importe tous les fichiers partiels dans le bon ordre.
+// C'est ce fichier qu'on compile avec :  lessc style.less style.css
+// Les fichiers commencent par _ (underscore) par convention
+//  pour dire "ce fichier ne se compile pas seul"
+
+@import "less/_variables";     // 1. Variables (@bg, @ink, @accent...)
+@import "less/_mixins";        // 2. Mixins (.section-label, .dark-button...)
+@import "less/_base";          // 3. Reset + styles de base (body, a, img)
+@import "less/_header";        // 4. Header + navigation
+@import "less/_page";          // 5. Layout grille principale
+@import "less/_hero";          // 6. Banniere d'accueil
+@import "less/_about";         // 7. Section "A propos"
+@import "less/_cards";         // 8. Cartes Definition + Attirance
+@import "less/_feature";       // 9. Bloc sombre "Pourquoi ce site"
+@import "less/_quotes";        // 10. Citations (header + grille + cartes)
+@import "less/_quotes-page";   // 11. Page dediee aux citations
+@import "less/_search";        // 12. Barre de recherche
+@import "less/_contact";       // 13. Page contact + formulaire
+@import "less/_footer";        // 14. Pied de page
+@import "less/_responsive";    // 15. Media queries (responsive)

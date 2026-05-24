@@ -1,0 +1,36 @@
+// ============================================
+// Les styles de base qui s'appliquent a tout le site
+// ============================================
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    font-family: @f-body;
+    font-size: 15px;
+    line-height: 1.4;
+    color: @ink;
+    background: @bg;
+    -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+    background: @accent;
+    color: @bg;
+}

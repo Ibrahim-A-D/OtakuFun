@@ -1,0 +1,38 @@
+// ============================================
+// SECTION A PROPOS
+// ============================================
+
+.about-title {
+    position: relative;
+    padding-top: 1cm;
+    border-top: 1px solid @rule;
+    .display-title();              // mixin : police decorative
+    font-size: ~"clamp(1.75rem, 3vw + 1rem, 2.75rem)";
+    line-height: 1.15;
+
+    &::before {
+        content: "À propos / Ma passion";
+        .section-label();          // mixin : petit label mono
+        margin-bottom: 1.5rem;
+        font-weight: 400;
+    }
+}
+
+.about-text {
+    column-count: 1;
+    column-rule: 1px solid @rule;
+    color: @ink-soft;
+    font-size: 1.02rem;
+    line-height: 1.75;
+    margin-top: 0.2rem;
+
+    &::first-letter {
+        font-family: @f-display;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: @accent;
+        float: left;
+        line-height: 1.0;
+        margin: 0.2rem 0.1rem 0 0;
+    }
+}

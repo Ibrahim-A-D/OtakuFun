@@ -1,0 +1,20 @@
+// ============================================
+// MISE EN PAGE PRINCIPALE (.page)
+// ============================================
+
+.page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .container-center();           // mixin
+    padding: clamp(1rem, 2vw, 4rem) @gutter;
+    row-gap: clamp(2rem, 3vw, 4rem);
+    column-gap: clamp(2rem, 5vw, 5rem);
+
+    > * {
+        grid-column: 1 / -1;
+        min-width: 0;
+    }
+}
+
+.card--definition { grid-column: 1; }
+.card--attirance  { grid-column: 2 / 3; }

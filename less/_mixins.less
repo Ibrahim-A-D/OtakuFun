@@ -1,0 +1,48 @@
+// ============================================
+// MIXINS Less
+// ============================================
+// Avant (CSS) : on copiait-collait le meme code 8 fois
+// Apres (Less) : on ecrit le code UNE SEULE FOIS dans un mixin,
+//                puis on l'appelle avec .nom-du-mixin()
+// ============================================
+.section-label() {
+    display: block;
+    font-family: @f-mono;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: @muted;
+}
+
+// --- Centrer un conteneur sur la page ---
+// Utilise pour : .site-header, .page, .site-footer, .quotes-page, .contact
+.container-center() {
+    max-width: @max;
+    margin: 0 auto;
+}
+
+// --- Style de bouton sombre ---
+// Utilise pour : .search__button et .contact-form__submit
+.dark-button() {
+    border: 0;
+    background: @ink;
+    color: @bg;
+    font-family: @f-mono;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+
+    &:hover {
+        background: @accent;
+    }
+}
+
+// --- Titre en police decorative ---
+// Utilise pour : .hero h1, .about-title, .card h1, .quotes-header h1, etc.
+.display-title() {
+    font-family: @f-display;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+}
